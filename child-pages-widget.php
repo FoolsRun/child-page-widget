@@ -3,7 +3,7 @@
 Plugin Name: Child Pages
 Description: Display child pages of a particular parent as a widget
 Author: FoolsRun
-Version: 1
+Version: 1.1
 */
  
  
