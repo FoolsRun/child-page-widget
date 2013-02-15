@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Child Pages
+Plugin Name: Child Pages Widget
 Description: Display child pages of a particular parent as a widget
 Author: FoolsRun
 Version: 1.1
@@ -93,20 +93,21 @@ class SubPagesWidget extends WP_Widget {
 	    <p>
 	        <label for="<?php echo $this->get_field_id( 'pagesortby' ); ?>"><?php _e( 'Sort pages by:' ); ?></label>
 	        	<select id="<?php echo $this->get_field_name( 'pagesortby' ); ?>" name="<?php echo $this->get_field_name( 'pagesortby' ); ?>">
-	            <option <?php if ($pagesortby == ‘post_title’) echo ’selected’; ?> value="post_title">post_title</option>
-	            <option <?php if ($pagesortby == ‘menu_order’) echo ’selected’; ?> value="menu_order">menu_order</option>
-	            <option <?php if ($pagesortby == ‘post_date’) echo ’selected’; ?> value="post_date">post_date</option>
-	            <option <?php if ($pagesortby == ‘post_modified’) echo ’selected’; ?> value="post_modified">post_modified</option>
-	            <option <?php if ($pagesortby == ‘ID’) echo ’selected’; ?> value="ID">ID</option>
-	            <option <?php if ($pagesortby == ‘post_author’) echo ’selected’; ?> value="post_author">post_author</option>
-	            <option <?php if ($pagesortby == ‘post_name’) echo ’selected’; ?> value="post_name">post_name</option>
+	            <option <?php if ($pagesortby == 'post_title') echo 'selected'; ?> value="post_title">post_title</option>
+	            <option <?php if ($pagesortby == 'menu_order') echo 'selected'; ?> value="menu_order">menu_order</option>
+	            <option <?php if ($pagesortby == 'post_date') echo 'selected'; ?> value="post_date">post_date</option>
+	            <option <?php if ($pagesortby == 'post_modified') echo 'selected'; ?> value="post_modified">post_modified</option>
+	            <option <?php if ($pagesortby == 'ID') echo 'selected'; ?> value="ID">ID</option>
+	            <option <?php if ($pagesortby == 'post_author') echo 'selected'; ?> value="post_author">post_author</option>
+	            <option <?php if ($pagesortby == 'post_name') echo 'selected'; ?> value="post_name">post_name</option>
 	        </select>
 	    </p>
 		<p>
 	        <label for="<?php echo $this->get_field_id( 'pageorderby' ); ?>"><?php _e( 'Order pages by:' ); ?></label>
 	        	<select id="<?php echo $this->get_field_name( 'pageorderby' ); ?>" name="<?php echo $this->get_field_name( 'pageorderby' ); ?>">
-	            <option <?php if ($pageorderby == ‘ASC’) echo ’selected’; ?> value="ASC">Ascending</option>
-	            <option <?php if ($pageorderby == ‘DESC’) echo ’selected’; ?> value="DESC">Descending</option>
+	            <option <?php if ($pageorderby == 'ASC') echo 'selected'; ?> value="ASC">Ascending</option>
+	            <option <?php if ($pageorderby == 'DESC') echo 'selected'; ?> value="DESC">Descending</option>
+	           	</select>
 		</p>
 		<?php
 	}
