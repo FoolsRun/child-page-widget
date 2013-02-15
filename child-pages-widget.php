@@ -90,13 +90,23 @@ class SubPagesWidget extends WP_Widget {
 		<label for="<?php echo $this->get_field_id( 'pagestoshow' ); ?>"><?php _e( 'Number of sub-pages to display:' ); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id( 'pagestoshow' ); ?>" name="<?php echo $this->get_field_name( 'pagestoshow' ); ?>" type="text" value="<?php echo esc_attr( $pagestoshow ); ?>" />
 		</p>
+	    <p>
+	        <label for="<?php echo $this->get_field_id( 'pagesortby' ); ?>"><?php _e( 'Sort pages by:' ); ?></label>
+	        	<select id="<?php echo $this->get_field_name( 'pagesortby' ); ?>" name="<?php echo $this->get_field_name( 'pagesortby' ); ?>">
+	            <option <?php if ($pagesortby == ‘post_title’) echo ’selected’; ?> value="post_title">post_title</option>
+	            <option <?php if ($pagesortby == ‘menu_order’) echo ’selected’; ?> value="menu_order">menu_order</option>
+	            <option <?php if ($pagesortby == ‘post_date’) echo ’selected’; ?> value="post_date">post_date</option>
+	            <option <?php if ($pagesortby == ‘post_modified’) echo ’selected’; ?> value="post_modified">post_modified</option>
+	            <option <?php if ($pagesortby == ‘ID’) echo ’selected’; ?> value="ID">ID</option>
+	            <option <?php if ($pagesortby == ‘post_author’) echo ’selected’; ?> value="post_author">post_author</option>
+	            <option <?php if ($pagesortby == ‘post_name’) echo ’selected’; ?> value="post_name">post_name</option>
+	        </select>
+	    </p>
 		<p>
-		<label for="<?php echo $this->get_field_id( 'pagesortby' ); ?>"><?php _e( 'Sort sub-pages by:' ); ?></label>
-		<input class="widefat" id="<?php echo $this->get_field_id( 'pagesortby' ); ?>" name="<?php echo $this->get_field_name( 'pagesortby' ); ?>" type="text" value="<?php echo esc_attr( $pagesortby ); ?>" />
-		</p>
-		<p>
-		<label for="<?php echo $this->get_field_id( 'pageorderby' ); ?>"><?php _e( 'Sort pages by:' ); ?></label>
-		<input class="widefat" id="<?php echo $this->get_field_id( 'pageorderby' ); ?>" name="<?php echo $this->get_field_name( 'pageorderby' ); ?>" type="text" value="<?php echo esc_attr( $pageorderby ); ?>" />
+	        <label for="<?php echo $this->get_field_id( 'pageorderby' ); ?>"><?php _e( 'Order pages by:' ); ?></label>
+	        	<select id="<?php echo $this->get_field_name( 'pageorderby' ); ?>" name="<?php echo $this->get_field_name( 'pageorderby' ); ?>">
+	            <option <?php if ($pageorderby == ‘ASC’) echo ’selected’; ?> value="ASC">Ascending</option>
+	            <option <?php if ($pageorderby == ‘DESC’) echo ’selected’; ?> value="DESC">Descending</option>
 		</p>
 		<?php
 	}
